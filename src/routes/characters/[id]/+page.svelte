@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Character from '$lib/components/character.svelte';
     export let data;
 
     $: character = data?.character;
@@ -8,7 +9,7 @@
     <title>{character.name}</title>
 </svelte:head>
 
-<h1>{character.name}</h1>
+<Character {...character} />
 
 
 
